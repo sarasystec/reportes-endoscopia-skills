@@ -1,0 +1,135 @@
+{
+  "skill_name": "reporte-endoscopico",
+  "descripcion": "Dictados telegráficos creados a partir de reportes reales anonimizados. 'expectations' son verificaciones que debe cumplir la salida.",
+  "evals": [
+    {
+      "id": 1,
+      "nombre": "evda-normal",
+      "prompt": "EVDA sura. todo normal, hill I. bx cuerpo y antro",
+      "expectations": [
+        "Encabezado con 'Entidad: SURA', 'Sedación: Propofol' y '<#QImágenes4,100#>'",
+        "Usa el texto base: 'Lumen normal. Contenido claro. Mucosa sin alteraciones.' y 'Píloro centrado, franqueable.'",
+        "Biopsias con formato 'cuerpo (1) y antro (2)'",
+        "Conclusión numerada en MAYÚSCULAS terminada en punto",
+        "Bloque B indica Material enviado a patología: SÍ",
+        "No inventa hallazgos patológicos"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "varices-ligadura",
+      "prompt": "sura. evda + ligadura. esofago desde 30 cm 3 cordones >5mm tortuosos con red spots, sin sangrado. 5 bandas. estomago gastropatia hipertensiva leve mosaico. hill II. duodeno nl. no bx. pte con terlipresina",
+      "expectations": [
+        "Título 'ESOFAGOGASTRODUODENOSCOPIA + LIGADURA DE VÁRICES ESOFÁGICAS'",
+        "Describe 'cordones varicosos violáceos' o equivalente de su voz, 'de más de 5 mm de diámetro' y 'cinco bandas'",
+        "Conclusión con 'VÁRICES ESOFÁGICAS GRANDES CON ÁREAS DE FRAGILIDAD' y 'LIGADURA ELÁSTICA SIN COMPLICACIONES INMEDIATAS'",
+        "Recomendaciones citan Baveno VII (vasoactivo 2-5 días, profilaxis antibiótica, betabloqueador + ligadura seriada)",
+        "No inventa el color ni la presencia de hematoquiste si no fue dictado (si pone 'violáceos' lo marca como supuesto o lo omite)"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "ulcera-forrest-ib-adrenalina-sola",
+      "prompt": "ccq. evda + hemostasia. bulbo pared anterior ulcera 10mm bordes planos sangrado en capa persistente, adrenalina 1:10000 hemostasia ok. estomago eritema leve hill I. no bx",
+      "expectations": [
+        "Clasifica '(SAKITA A1 / FORREST Ib)'",
+        "Escribe 'inyección (endoscópica) de adrenalina', no 'escleroterapia'",
+        "Recomendaciones mencionan que la adrenalina en monoterapia no se recomienda (ESGE 2021 / ACG 2021)",
+        "Recomienda IBP dosis alta 72 h y prueba de H. pylori",
+        "Bloque C avisa del cambio de terminología o de la monoterapia"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "barrett-praga",
+      "prompt": "sura. evda. esofago distal lenguetas salmon, circunferencial 2 cm, maxima 4 cm, bx seattle. ugE a 3 cm de impresion. hill III. estomago eritema leve. bx esofago (1) cuerpo (2) antro (3)",
+      "expectations": [
+        "Describe 'mucosa aterciopelada, de coloración rosa-salmón'",
+        "Conclusión con 'ESÓFAGO DE BARRETT (PRAGA C2M4)' y 'PENDIENTE DE CONFIRMACIÓN HISTOLÓGICA'",
+        "Conclusión incluye 'HERNIA HIATAL TIPO I (SAGES) DE 3 CM'",
+        "Recomendaciones de vigilancia ACG 2022 (≥3 cm cada 3 años si no hay displasia)"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "colono-polipo",
+      "prompt": "colsanitas colono total hasta ileon. sigmoides polipo sesil 6mm resecado asa fria a patologia. diverticulos sigmoides. boston 2 3 3. hemorroides internas grado I",
+      "expectations": [
+        "Usa el texto base de Procedimiento ('Se avanza colonoscopio flexible en forma retrógrada hasta íleon distal…')",
+        "Preparación 'CD: 2 - CT: 3 - CI: 3 (Escala de Boston de preparación de colon).'",
+        "Conclusión 'PÓLIPO DEL COLON SIGMOIDES RESECADO (PARIS 0-Is)'",
+        "Recomienda intervalo según patología (USMSTF 2020)",
+        "Bloque B: patología SÍ, tejido 'pólipo del sigmoides'"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "colono-sin-boston",
+      "prompt": "colono sura normal hasta ciego, hemorroides externas",
+      "expectations": [
+        "Pregunta por el puntaje de Boston por segmento (o deja [ ] y lo marca como dato crítico faltante)",
+        "No inventa números de Boston"
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "cpre-colangitis",
+      "prompt": "cpre. indicacion colangitis. premed diclofenaco propofol. papila normal, canulacion selectiva. coledoco 14mm con 3 calculos hasta 10mm. esfinterotomia amplia, balon extraccion saca calculos y pus, colangio oclusiva limpia. stent plastico 10Fr x 7cm. anestesia dr [anestesiologo]",
+      "expectations": [
+        "Campos Indicación, Premedicación, Descripción, Duodenoscopia, Procedimiento, Biopsia, Conclusión, Recomendaciones",
+        "El párrafo de consentimiento se titula 'Descripción' (no un segundo 'Indicación')",
+        "Conclusión numerada sin saltos e incluye 'INSERCIÓN DE STENT BILIAR 10FR X 7 CM – FUNCIONAL'",
+        "Recomendaciones: 'NVO hasta mañana', 'Vigilar signos de pancreatitis o sangrado', control/retiro del stent; cita Tokyo 2018 para antibiótico"
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "peg",
+      "prompt": "ccq gastrostomia. esofago normal, estomago eritema leve, hill I, duodeno nl. transiluminacion curvatura mayor cuerpo distal, trocar 14, sonda 20Fr pull fija a 3 cm",
+      "expectations": [
+        "Título 'GASTROSTOMÍA ENDOSCÓPICA PERCUTÁNEA'",
+        "Procedimiento con 'técnica PULL' y 'se fija a 3 cm de la piel'",
+        "Recomendaciones 'Vigilar sangrado y/o dolor abdominal' e 'Iniciar nutrición y medicamentos en 4 horas si no surgen complicaciones'"
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "sleeve-esofagitis",
+      "prompt": "eps sura evda. sleeve buenas condiciones, antro eritema leve. esofago distal erosiones >5mm no confluentes. ugE a nivel. no bx",
+      "expectations": [
+        "Conclusión incluye 'ESOFAGITIS EROSIVA DISTAL' con '(LOS ÁNGELES, GRADO B)'",
+        "Conclusión incluye 'CAMBIOS ANATÓMICOS COMPATIBLES CON GASTRECTOMÍA VERTICAL TIPO SLEEVE'",
+        "Recomendación IBP 8 semanas (ACG 2022)"
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "inconsistencia-severidad",
+      "prompt": "revisa este reporte:\nEstómago: Lago gástrico claro, escaso. Mucosa de fondo, cuerpo y antro con eritema intenso. Piloro centrado, franqueable.\nConclusión: 1- GASTRITIS ERITEMATOSA CORPOROANTRAL LEVE;\n3- POLIPO GASTRICO RESECADO",
+      "expectations": [
+        "Señala la discrepancia 'eritema intenso' vs 'LEVE' sin elegir uno por su cuenta",
+        "Señala que se concluye un pólipo resecado no descrito",
+        "Corrige numeración (1, 2) y tildes (Píloro, PÓLIPO GÁSTRICO)"
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "nombre-paciente",
+      "prompt": "paciente Juan Pérez cc 123456, colsanitas, evda normal hill I no bx",
+      "expectations": [
+        "El reporte NO contiene 'Juan', 'Pérez' ni '123456'",
+        "Recuerda en una línea no dictar datos identificables"
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "candida-kodsi",
+      "prompt": "sura evda. esofago placas blancas 3-4mm multiples no confluentes sin ulceracion todo el esofago. resto normal hill II. no bx",
+      "expectations": [
+        "Clasifica '(KODSI II)'",
+        "Recomienda fluconazol VO 14–21 días (IDSA 2016)",
+        "Frase 'compatibles con monilia/moniliasis' en su voz"
+      ]
+    }
+  ]
+}
