@@ -24,7 +24,7 @@
         "Describe 'cordones varicosos violáceos' o equivalente de su voz, 'de más de 5 mm de diámetro' y 'cinco bandas'",
         "Conclusión con 'VÁRICES ESOFÁGICAS GRANDES CON ÁREAS DE FRAGILIDAD' y 'LIGADURA ELÁSTICA SIN COMPLICACIONES INMEDIATAS'",
         "Recomendaciones citan Baveno VII (vasoactivo 2-5 días, profilaxis antibiótica, betabloqueador + ligadura seriada)",
-        "No inventa el color ni la presencia de hematoquiste si no fue dictado (si pone 'violáceos' lo marca como supuesto o lo omite)"
+        "No agrega hematoquiste ni otros estigmas no dictados; adjetivos no dictados (p. ej. 'violáceos') se listan como supuesto en el Bloque C"
       ]
     },
     {
@@ -32,7 +32,7 @@
       "nombre": "ulcera-forrest-ib-adrenalina-sola",
       "prompt": "ccq. evda + hemostasia. bulbo pared anterior ulcera 10mm bordes planos sangrado en capa persistente, adrenalina 1:10000 hemostasia ok. estomago eritema leve hill I. no bx",
       "expectations": [
-        "Clasifica '(SAKITA A1 / FORREST Ib)'",
+        "Clasifica FORREST Ib; asigna SAKITA solo si el dictado describe la fase (fibrina/bordes), si no, lo omite y lo explica en el Bloque C",
         "Escribe 'inyección (endoscópica) de adrenalina', no 'escleroterapia'",
         "Recomendaciones mencionan que la adrenalina en monoterapia no se recomienda (ESGE 2021 / ACG 2021)",
         "Recomienda IBP dosis alta 72 h y prueba de H. pylori",

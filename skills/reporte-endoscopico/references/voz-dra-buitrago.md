@@ -90,6 +90,7 @@ Recomendaciones:
   - `VÁRICES ESOFÁGICAS GRANDES CON ÁREAS DE FRAGILIDAD, SIN SANGRADO ACTIVO – LIGADURA ELÁSTICA SIN COMPLICACIONES INMEDIATAS;`
   - `ENFERMEDAD DIVERTICULAR DEL COLON SIGMOIDES;`
   - `COLONOSCOPIA TOTAL NORMAL.`
+  - EVDA sin hallazgos: `ESOFAGOGASTRODUODENOSCOPIA NORMAL.` (paralelo a su fórmula de colonoscopia; si ella usa otra, se reemplaza aquí).
 - Las lesiones pendientes de histología llevan "A ESTUDIO" ("PÓLIPOS GÁSTRICOS A ESTUDIO", "COLITIS SEGMENTARIA A ESTUDIO"). La sospecha se escribe entre paréntesis ("(PROBABLE ADENOCARCINOMA BORRMANN IV)").
 - **Dentro de las mayúsculas, el grado conserva su forma técnica:** FORREST Ib, FORREST IIa, PARIS 0-Is, PARIS 0-IIa, PRAGA C1M2, JNET 2A.
 - La conclusión **nunca** trae algo que no esté descrito arriba, y todo lo descrito relevante aparece en la conclusión.
