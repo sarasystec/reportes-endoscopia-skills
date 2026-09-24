@@ -16,3 +16,5 @@ for dir in "$root"/skills/*/; do
   (cd "$root/skills" && zip -qr "$dist/$name.zip" "$name" -x '*.DS_Store')
   echo "dist/$name.zip"
 done
+
+node "$root/scripts/build-bookmarklet.mjs"

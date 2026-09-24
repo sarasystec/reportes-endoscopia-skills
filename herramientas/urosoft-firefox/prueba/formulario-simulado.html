@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Simulación Nota Operatoria</title></head>
+<body>
+<!-- Réplica simplificada del formulario de Nota Operatoria de Urosoft (según capturas), dentro de un marco
+     como suele ocurrir en sistemas PHP antiguos. Sirve para probar el botón sin tocar datos reales. -->
+<iframe id="contenido" style="width:100%;height:700px;border:0" srcdoc='
+<html><body style="font-family:sans-serif">
+<table width="100%"><tr>
+  <td><input type="radio" name="pat" value="S" checked></td>
+  <td><input type="radio" name="pat" value="N"></td>
+  <td><div>MATERIAL ENVIADO A PATOLOGIA</div></td>
+</tr></table>
+<table width="100%">
+  <tr><td><div>TRATAMIENTOS EFECTUADOS Y TIEMPO DE DURACION:</div></td><td><div>OBSERVACIONES PATOLOGIA</div></td></tr>
+  <tr><td><textarea name="trat"></textarea></td><td><textarea name="obs_pat"></textarea></td></tr>
+</table>
+<table width="100%">
+  <tr><td><div><b>HALLAZGOS</b></div></td><td><div>DESCRIPCIONES</div></td></tr>
+  <tr><td><textarea name="txt_campo7" rows="4" cols="60"></textarea></td>
+      <td><textarea name="descrip">PREVIA ASEPSIA Y ANTISEPSIA, VERIFICACION DE PAUSA DE SEGURIDAD QUIRURGICA, SE REALIZA.</textarea></td></tr>
+</table>
+</body></html>'></iframe>
+</body>
+</html>
